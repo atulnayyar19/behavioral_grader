@@ -1,1 +1,4 @@
 *.pdf binary
+
+# Exclude guide exports, styling, and documentation tooling from language stats.
+behavioral_grader/docs/** linguist-documentation
