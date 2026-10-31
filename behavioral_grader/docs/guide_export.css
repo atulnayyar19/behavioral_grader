@@ -1,0 +1,130 @@
+:root {
+  --violet: #2a034c;
+  --violet-mid: #451284;
+  --violet-bright: #7949f0;
+  --teal: #00ca9f;
+  --teal-light: #e0faf3;
+  --ink: #282137;
+  --muted: #665f70;
+  --line: #e7e0ec;
+  --paper: #ffffff;
+  --canvas: #f7f4fa;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 16px/1.65 Arial, Helvetica, sans-serif; }
+a { color: #4a1688; text-underline-offset: 3px; }
+a:hover { color: #006f60; }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  min-height: 390px;
+  padding: 42px max(28px, calc((100vw - 1210px) / 2));
+  background: linear-gradient(112deg, #2a034c 3%, #451284 68%, #623ab7 100%);
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::before { width: 640px; height: 640px; right: -125px; top: -220px; }
+.hero::after { width: 440px; height: 440px; right: -25px; top: -112px; border-color: rgba(0,202,159,.42); }
+.hero-inner { position: relative; z-index: 1; max-width: 900px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 12px; color: #dffaf3; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow::before { content: ""; width: 26px; height: 4px; border-radius: 3px; background: var(--teal); }
+.hero h1 { max-width: 900px; margin: 40px 0 18px; font-size: clamp(38px, 5.7vw, 72px); line-height: 1.05; letter-spacing: -.045em; font-weight: 300; }
+.hero h1 strong { font-weight: 700; }
+.hero p { max-width: 680px; margin: 0; color: #f0eafa; font-size: 19px; line-height: 1.5; }
+.hero .accent { color: var(--teal); }
+
+.toolbar { max-width: 1210px; margin: 0 auto; padding: 20px 28px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.toolbar-note { color: var(--muted); font-size: 13px; }
+.print-button { border: 0; border-radius: 999px; padding: 10px 20px; background: var(--teal); color: var(--violet); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.print-button:hover { background: #49dfc0; }
+.layout { max-width: 1210px; display: grid; grid-template-columns: 245px minmax(0,1fr); gap: 36px; margin: 0 auto; padding: 20px 28px 72px; }
+.sidebar { align-self: start; position: sticky; top: 20px; max-height: calc(100vh - 40px); overflow: auto; padding: 22px 8px 24px 0; }
+.sidebar h2 { margin: 0 0 15px; color: var(--violet); font-size: 11px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+.sidebar a { display: block; padding: 8px 10px; border-left: 2px solid transparent; color: #514562; font-size: 13px; line-height: 1.35; text-decoration: none; }
+.sidebar a:hover, .sidebar a:focus { border-left-color: var(--teal); background: #eee7f4; color: var(--violet); }
+.article { min-width: 0; padding: 42px 50px 55px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); box-shadow: 0 20px 54px rgba(42,3,76,.055); }
+.article > p:first-child { margin-top: 0; font-size: 19px; color: var(--violet); line-height: 1.55; }
+.article h2 { scroll-margin-top: 26px; margin: 56px 0 18px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--violet); font-size: 30px; line-height: 1.22; letter-spacing: -.025em; }
+.article h2:first-of-type { margin-top: 28px; }
+.section-number { display: inline-flex; width: 42px; height: 42px; margin-right: 9px; justify-content: center; align-items: center; vertical-align: middle; border-radius: 50%; background: var(--teal); color: var(--violet); font-size: 15px; font-weight: 800; letter-spacing: 0; }
+.article h3 { margin: 32px 0 10px; color: #4a1688; font-size: 21px; line-height: 1.3; }
+.article p, .article ul, .article ol { margin: 0 0 16px; }
+.article ul, .article ol { padding-left: 25px; }
+.article li { margin: 6px 0; }
+.article li::marker { color: #4a1688; }
+.article strong { color: var(--violet); }
+.article code { padding: .08em .3em; border-radius: 3px; background: #f0ecf4; color: #3d2458; font: .89em/1.5 Consolas, 'Courier New', monospace; overflow-wrap: anywhere; }
+.article pre { overflow-x: auto; margin: 18px 0 24px; padding: 18px 20px; border-left: 4px solid var(--teal); border-radius: 0 5px 5px 0; background: #281441; color: #fff; font: 13px/1.5 Consolas, 'Courier New', monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.article pre code { padding: 0; background: none; color: inherit; font: inherit; }
+.article table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; table-layout: fixed; font-size: 14px; }
+.article th, .article td { padding: 11px 12px; border: 1px solid #ddd4e6; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.article th { background: #efe9f5; color: var(--violet); font-weight: 700; }
+.article tr:nth-child(even) td { background: #fbf9fc; }
+.article blockquote { margin: 20px 0; padding: 16px 20px; border-left: 4px solid var(--teal); background: var(--teal-light); }
+.article blockquote p:last-child { margin-bottom: 0; }
+.flow { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 20px 0 28px; }
+.flow-step { display: flex; gap: 12px; align-items: flex-start; min-height: 70px; padding: 14px; border: 1px solid #dcd2e7; border-radius: 6px; background: #f8f5fb; }
+.flow-step span { display: inline-block; min-width: 28px; color: #007d6a; font-size: 12px; font-weight: 800; }
+.flow-step b { color: var(--violet); font-size: 14px; line-height: 1.35; }
+.endnote { max-width: 1210px; margin: 0 auto; padding: 0 28px 38px; color: var(--muted); font-size: 12px; }
+
+@media (max-width: 870px) {
+  .layout { display: block; }
+  .sidebar { position: static; max-height: none; padding: 10px 0 20px; }
+  .sidebar nav { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; }
+  .article { padding: 30px 24px; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: 330px; padding: 32px 24px; }
+  .hero h1 { margin-top: 32px; }
+  .hero p { font-size: 16px; }
+  .toolbar, .layout { padding-left: 16px; padding-right: 16px; }
+  .sidebar nav, .flow { grid-template-columns: 1fr; }
+  .article { padding: 26px 18px; }
+  .article h2 { font-size: 25px; }
+  .article table { font-size: 12px; }
+  .article th, .article td { padding: 8px; }
+}
+
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm;
+  @bottom-left { content: 'BEHAVIORAL GRADER  /  LEARNING GUIDE'; font: 8px Arial, sans-serif; color: #665f70; }
+  @bottom-right { content: counter(page); font: 8px Arial, sans-serif; color: #665f70; }
+}
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 10pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .hero { min-height: 0; height: 225px; margin: 0 0 20px; padding: 22px 24px 20px; background: #2a034c !important; }
+  .hero::before { width: 350px; height: 350px; right: -55px; top: -140px; }
+  .hero::after { width: 260px; height: 260px; right: 0; top: -75px; }
+  .hero h1 { margin: 19px 0 10px; max-width: 650px; font-size: 31pt; }
+  .hero p { max-width: 570px; font-size: 12pt; }
+  .toolbar, .sidebar, .endnote { display: none !important; }
+  .layout { display: block; max-width: none; margin: 0; padding: 0; }
+  .article { padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .article > p:first-child { font-size: 11pt; }
+  .article h2 { margin: 23px 0 9px; padding-top: 11px; font-size: 17pt; break-after: avoid; }
+  .article h3 { margin: 17px 0 7px; font-size: 12pt; break-after: avoid; }
+  .section-number { width: 26px; height: 26px; margin-right: 6px; font-size: 10pt; }
+  .article p, .article ul, .article ol { margin-bottom: 9px; }
+  .article li { margin: 3px 0; }
+  .article pre { margin: 9px 0 13px; padding: 10px 12px; font-size: 8pt; line-height: 1.32; break-inside: avoid; }
+  .article table { margin: 10px 0 14px; font-size: 8pt; break-inside: auto; }
+  .article th, .article td { padding: 6px 7px; }
+  .article tr, .article td, .article th { break-inside: avoid; }
+  .article thead { display: table-header-group; }
+  .flow { gap: 5px; margin: 10px 0 15px; }
+  .flow-step { min-height: 0; padding: 7px; break-inside: avoid; }
+  .flow-step b { font-size: 8pt; }
+  a { color: var(--violet); text-decoration: none; }
+}
