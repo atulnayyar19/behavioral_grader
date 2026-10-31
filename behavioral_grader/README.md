@@ -1,4 +1,4 @@
-# Behavioral grader
+# AI Model Behavioral Grader
 
 This package contains the complete two-stage behavioral evaluation workflow:
 
@@ -37,7 +37,7 @@ package and Chrome or Edge).
 
 ## Run
 
-From the Taiga Project root, install the grader dependency if needed, then run:
+From the repository root, install the grader dependency if needed, then run:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r .\behavioral_grader\requirements.txt

@@ -11,9 +11,5 @@ __pycache__/
 .ruff_cache/
 behavioral_grader/outputs/
 behavioral_grader/docs/sequence_grader_beginner_handbook.pdf
-repository_kickoff/outputs/
-repository_kickoff/selected_repositories/
-repository_kickoff/data/used_repositories.json
-
-# Historical third-party clones and diagnostic runs are local-only.
-repository_kickoff/legacy_long_horizon/
+# Repository Kickoff is a separate local development, outside this repository.
+/repository_kickoff/

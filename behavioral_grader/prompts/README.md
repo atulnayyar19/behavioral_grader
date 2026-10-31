@@ -14,6 +14,4 @@ repository-aware next-turn generation.
 - `next_turn_request_types.md` defines the shared request-type taxonomy.
 
 `behavioral_grader.prompt_loader` expands standalone
-`{{include:filename.md}}` directives within this directory. The long-horizon
-archived pipeline owns separate trajectory and heuristic prompts in
-`repository_kickoff/legacy_long_horizon/prompts/`.
+`{{include:filename.md}}` directives within this directory.
