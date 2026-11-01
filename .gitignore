@@ -10,6 +10,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 behavioral_grader/outputs/
+# Historical rollback notes remain local; Git commits track published revisions.
+/behavioral_grader/checkpoints/
 behavioral_grader/docs/sequence_grader_beginner_handbook.pdf
 # Repository Kickoff is a separate local development, outside this repository.
 /repository_kickoff/
